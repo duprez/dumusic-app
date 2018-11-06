@@ -1,0 +1,12 @@
+<div *ngFor="let song of list" class="song-container">
+  <img [src]="song.picture || '../../assets/default_album_picture.png'" (click)="onSelectSong(song)">
+  <div class="title-container">
+    <h4 class="song-name">{{ song.name }}</h4>
+    <small class="song-date"> {{ song.date | date: 'dd/MM/yyyy' }}</small>
+    <div class="actions-container">
+      <ion-icon name="link" (click)="onOpenSong(song)"></ion-icon>
+      <ion-icon ios="md-create" md="md-create" (click)="onEditSong(song)"></ion-icon>
+      <ion-icon name="trash" color="danger" (click)="onDeleteSong(song)"></ion-icon>
+    </div>
+  </div>
+</div>

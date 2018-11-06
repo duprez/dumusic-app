@@ -1,16 +1,44 @@
-// http://ionicframework.com/docs/theming/
+// Variables
+$bg-danger: red;
+$bg-success: green;
+$bg-warning: yellow;
+$bg-info: blue;
+$bg-dark: black;
+$bg-light: white;
 
+$color-danger: red;
+$color-success: green;
+$color-warning: yellow;
+$color-info: blue;
+$color-light: white;
+$color-dark: black;
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.btn-success {
+    color: $color-light;
+    background: $bg-success;
+}
+
+.btn-danger {
+    color: $color-light !important;
+    background: $bg-danger !important;
+    border-radius: 4px !important;
+}
+
+.btn-dark {
+    background: $bg-dark !important;
+    color: $color-light !important;
+    border-radius: 4px !important;
+}
+
+// OVERWRITE IONIC STYLING
+.searchbar.searchbar-md {
+    width: 60vh;
+    display: inline-block;
+    .searchbar-input {
+        padding: 0 45px !important;
+        border-radius: 4px !important;
+    }
+    .searchbar-search-icon {
+        top: 5px !important;
+    }
+}

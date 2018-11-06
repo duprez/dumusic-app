@@ -1,0 +1,19 @@
+music-list {
+    .song-container {
+        display: flex;
+        margin: 0 0 20px;
+        align-items: center;
+        > img {
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+        .actions-container {
+            .icon {
+                font-size: 25px;
+            }
+        }
+    }
+    h4 {
+        margin: 0;
+    }
+}

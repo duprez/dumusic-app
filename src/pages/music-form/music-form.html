@@ -1,0 +1,29 @@
+<!-- <ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Nueva canción</ion-title>
+  </ion-navbar>
+</ion-header> -->
+
+
+<ion-content padding>
+  <form novalidate [formGroup]="musicForm">
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Nombre</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <input type="file" formControlName="file" (change)="onChanges($event)">
+    </ion-item>
+  </ion-list>
+  </form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="dark">
+    <button ion-button color="danger" (click)="cancel()" margin-left>Cancelar</button>
+    <button ion-button color="primary" (click)="onSubmit()" float-right margin-right>Aceptar</button>
+  </ion-toolbar>
+</ion-footer>
